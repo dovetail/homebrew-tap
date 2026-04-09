@@ -5,20 +5,20 @@
 class Dt < Formula
   desc "Dovetail CLI"
   homepage "https://github.com/dovetail/dt"
-  version "0.1.0-rc.1"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/dt_darwin_amd64.tar.gz"
-      sha256 "ffdb40dab22f0d8594cf53a1a1388a9ffb130b099045bd0056fc3b7ff738f98c"
+      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_darwin_amd64.tar.gz"
+      sha256 "688b5e85e4bf2d6bbf0ad017ac0c90d430ef4a04d739816f86103940ca0e9900"
 
       define_method(:install) do
         bin.install "dt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/dt_darwin_arm64.tar.gz"
-      sha256 "5c26c772da3ca461d3af4c436184238ed837425280c3d754339d5bccc4bb64e3"
+      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_darwin_arm64.tar.gz"
+      sha256 "b58395c403d6d0a259e50795bbec8076e082e7cb75fabcdf8f8f41d0af82ee9b"
 
       define_method(:install) do
         bin.install "dt"
@@ -28,15 +28,15 @@ class Dt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/dt_linux_amd64.tar.gz"
-      sha256 "748c7017708d9e04641f997ff45ae81c35732302c6480bc8a57f18e4ea59fcf6"
+      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_linux_amd64.tar.gz"
+      sha256 "c9c30dc30a079acb5d9716ea6b05077ab573a5454d731fb528a97ec614378f59"
       define_method(:install) do
         bin.install "dt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/dt_linux_arm64.tar.gz"
-      sha256 "91d63b9a3aacafb4989d02d2501136295c8fb92f3cd3c627c7a3b9d34905b294"
+      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_linux_arm64.tar.gz"
+      sha256 "56273a63a0e31be77e8f1b58bfd89f40980de7d5d6c9bc1d9834487722c895bc"
       define_method(:install) do
         bin.install "dt"
       end
