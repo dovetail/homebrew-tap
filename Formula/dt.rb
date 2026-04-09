@@ -5,20 +5,20 @@
 class Dt < Formula
   desc "Dovetail CLI"
   homepage "https://github.com/dovetail/dt"
-  version "0.2.0"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_darwin_amd64.tar.gz"
-      sha256 "f67cc9759746afccf09dfa3bf23c97d5f13817540330214a6cf83245f7c85e78"
+      url "https://github.com/dovetail/cli/releases/download/v0.1.2/dt_darwin_amd64.tar.gz"
+      sha256 "da6c06c518fbe81de96e35d6d07abca2d5e3d456be667cf395834efda88697ef"
 
       define_method(:install) do
         bin.install "dt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_darwin_arm64.tar.gz"
-      sha256 "9f08464f42db92b8069a364c30e06c630e62cfa9702a3e4c762fae808334db56"
+      url "https://github.com/dovetail/cli/releases/download/v0.1.2/dt_darwin_arm64.tar.gz"
+      sha256 "909ac82f823824d5e55f425d683b11cda8932dc3d85318f0a8800c2d3d4c89ae"
 
       define_method(:install) do
         bin.install "dt"
@@ -28,15 +28,15 @@ class Dt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_linux_amd64.tar.gz"
-      sha256 "07b775c64395c3dbce7dc448a21aa3ba63ef925c6f88b5dfb2724a79af2105a6"
+      url "https://github.com/dovetail/cli/releases/download/v0.1.2/dt_linux_amd64.tar.gz"
+      sha256 "30b18b70a8a431d48d91c33097578e928f609ddeeca391ddf004dc5e83b6a33e"
       define_method(:install) do
         bin.install "dt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dovetail/cli/releases/download/v0.2.0/dt_linux_arm64.tar.gz"
-      sha256 "9def9b28b6971f4a0123b87e84dc1b2017b6d82268807e6df5dc138d017e0c91"
+      url "https://github.com/dovetail/cli/releases/download/v0.1.2/dt_linux_arm64.tar.gz"
+      sha256 "8ab0b0044278552727e571597008332ea4c8e60d0bd9827d575928d485ba69de"
       define_method(:install) do
         bin.install "dt"
       end
