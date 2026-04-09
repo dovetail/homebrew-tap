@@ -10,18 +10,18 @@ class Dt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/cli_darwin_amd64.tar.gz"
-      sha256 "8ffd514fd31f7af12ce0e91dac02275389f04e313c56c54052a34075bc72f89b"
+      sha256 "ea59bda7732d638a9693428695a7488eb5c6a8039d61b4a9bb522c80111373cf"
 
       define_method(:install) do
-        bin.install "cli"
+        bin.install "dt"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/cli_darwin_arm64.tar.gz"
-      sha256 "210039f251bb105e5a07fe2520ff6233ad783cdde895a0abc64077c5e240bc95"
+      sha256 "93d7f0a84d9cc6f8b5d9a482fb6ea8f648bead441dc4e7eb349a5f7e155dfdfb"
 
       define_method(:install) do
-        bin.install "cli"
+        bin.install "dt"
       end
     end
   end
@@ -29,16 +29,16 @@ class Dt < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/cli_linux_amd64.tar.gz"
-      sha256 "c50a4d9f737fc34366b6d4ecb6ef30d9853d8345c5f35959ea76d37d2436e0d6"
+      sha256 "2ff3ca92e0c766a5596205e2a741d0ccc1710f6dc76bb2a7a7b2fb014cd877ad"
       define_method(:install) do
-        bin.install "cli"
+        bin.install "dt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/dovetail/cli/releases/download/v0.1.0-rc.1/cli_linux_arm64.tar.gz"
-      sha256 "82bb963cac316e1422fcbd9e625d0392ccc9029bb0de6eb24a9a36c7c1f1ff67"
+      sha256 "6a5485de5a6e132edf1c6fdd97cf1eae39ca5dbea533cde38738c7fbaaeac47f"
       define_method(:install) do
-        bin.install "cli"
+        bin.install "dt"
       end
     end
   end
